@@ -1,3 +1,116 @@
 .header
-	padding: 16px 0
-	background: #eee
+   background: #FBFAFA
+   &__block
+    display: flex
+    align-items: center
+   &__nav
+    padding-left: 100px
+    padding-right: 100px
+   &__list
+    display: flex
+    gap: 100px
+    a
+      position: relative
+      text-decoration: none
+      color:  #0B0B0B
+      font-family: $deff
+      font-size: 20px
+      font-weight: 400
+      line-height: 29.4px
+      text-align: left
+      &::after
+        content: ''
+        position: absolute
+        width: 30px
+        left: 0px
+        height: 3px
+        background-color: #da7b26
+        bottom: -10px
+        transition: all 0.3s
+        ::hover
+          color: red
+
+   &__logo-wrap
+    padding: 68px 70px 69px 70px
+    height: 166px 
+    background-color: #0B0B0B
+    a
+      text-decoration: none
+      color: white
+    p
+      position: relative
+      font-family: $deff
+      font-size: 24px
+      font-weight: 600
+      line-height: 29.4px
+      letter-spacing: 0.4em
+      text-align: left
+      &::after
+        content: ''
+        position: absolute
+        width: 77px
+        right: 4px
+        height: 2px
+        background-color: #da7b26
+        bottom: -10px
+        transition: all 0.3s
+        ::hover
+          width: 97px
+      span
+        color: #da7b26
+   &__lang-wrap
+    display: flex
+    justify-content: center
+    flex-direction: column
+    padding-right: 50px
+    padding-left: 50px
+    height: 166px
+    background: #454545
+    transition: all 0.4s ease
+    &:hover
+      background: #555454
+    a
+      font-family: $deff
+      font-size: 20px
+      font-weight: 400
+      line-height: 29.4px
+      text-align: left
+      text-decoration: none
+      color: #FFFFFF
+
+   &__basket-wrap
+      position: relative
+      display: flex
+      align-items: center
+      gap: 179px
+      background: #DA7B26
+      height: 166px
+      max-width: 346px
+      width: 100%
+      padding-left: 25px
+      span
+        padding-top: 4px
+        font-family: $deff
+        font-size: 24px
+        font-weight: 400
+        line-height: 29.4px
+        text-align: left
+        color: #fff
+
+      &::after
+        content: ""
+        position: absolute
+        width: 125px
+        height: 3px
+        top: 50%
+        left: 80px
+        background-color: #ffff
+
+
+
+
+
+
+
+
+
