@@ -18,19 +18,27 @@
     align-items: center
 
   &__item
-    // max-width: 688px
-    // width: 100%
-    // height: 585px
+    position: relative
     border: 1px solid #D0D0D0
-    padding: 150px 127px 55px 68px
+    padding: 150px 127px 55px 68px  
+    transition: all 0.5s ease
+    &:hover
+      background-color: #DA7B26
+      span
+        color: #FFFF
+    svg
+      position: absolute
+      top: 0
+      left: 0
     h5
-
       font-size: 24px
       font-weight: 600
       line-height: 29.71px
       text-align: left
       span
-       color: #DA7B26
+        transition: all 0.5s ease
+        color: #DA7B26
+
 
 
 
