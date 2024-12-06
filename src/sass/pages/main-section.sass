@@ -1,6 +1,6 @@
 .main-section
   position: relative
-  padding: 133px 176px 110px 181px
+  padding-top: 120px
   &__svg-wrap
     display: flex
     justify-content: center
@@ -11,6 +11,7 @@
       z-index: -999 
       width: 997px
       height: 1170px
+
   &__title-wrap
     text-align: center
     font-size: 130px
@@ -74,15 +75,19 @@
       transform: translate(-50%,-50%)
 
   &__first-block
-    display: flex
-    justify-content: start
-    align-items: center
+    // display: flex
+    // justify-content: start
+    // align-items: center
+    flex: 1 1 50%
+    max-width: 50%
     background:  #FBFAFA
     width: 100%
     a
-      padding-left: 100px
+      padding: 130px 0 130px 100px
 
   &__second-block
+    flex: 1 1 50%
+    max-width: 50%
     background-image: url("../assets/images/background.png")
     background-repeat: no-repeat
     background-size: cover
