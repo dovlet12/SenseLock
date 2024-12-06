@@ -40,6 +40,7 @@
 
 
    &__logo-wrap
+    position: relative
     a
       display: flex
       justify-content: center
@@ -47,10 +48,11 @@
       background-color: #0B0B0B
       padding: 65px 80px
       text-decoration: none
-      color: white
+      color: #fff
       transition: all 0.4s ease
       &:hover
         background: #282828
+        color: #da7b26
         &::after
           transform: translateX(0)
       &::after
@@ -60,7 +62,7 @@
         left: 0px
         height: 3px
         background-color: #da7b26
-        bottom: 0
+        top: 0
         transition: transform 0.3s ease
         transform: translateX(calc(-100% + 30px))
 

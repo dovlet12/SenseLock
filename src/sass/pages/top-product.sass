@@ -18,19 +18,33 @@
     align-items: center
 
   &__item
+    cursor: pointer
     position: relative
     border: 1px solid #D0D0D0
-    padding: 150px 127px 55px 68px  
     transition: all 0.5s ease
+    h4
+      position: absolute
+      top: 238px
+      left: 111px
+      color: #ffff
+      font-size: 50px
+      font-weight: 600
+      line-height: 55px
+      text-align: left
+    a
+      position: absolute
+      bottom:  110px
+      left: 111px
+      svg
+        margin-left: 15px
     &:hover
       background-color: #DA7B26
       span
         color: #FFFF
-    svg
-      position: absolute
-      top: 0
-      left: 0
     h5
+      position: absolute
+      bottom: 55px
+      left: 73px
       font-size: 24px
       font-weight: 600
       line-height: 29.71px
@@ -38,7 +52,19 @@
       span
         transition: all 0.5s ease
         color: #DA7B26
+  &__img
+    z-index: 10
 
+  &__pos-img
+    position: absolute
+    top: 95px
+    left: 194px
+    opacity: 0
+    transition: all 0.5s ease
+    // z-index: -1
+    &:hover
+      opacity: 1
+      visibility: inherit
 
 
 
