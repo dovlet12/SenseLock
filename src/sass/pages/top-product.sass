@@ -1,21 +1,131 @@
 .top-product
   padding-top: 120px
   padding-bottom: 120px
+  +min_sm
+  +min_md
+  +min_lg
+  +min_xl
+  +min_xxl
+  +min_fullHd
   &__title-wrap
     display: flex
     align-items: center
-    justify-content: space-between
-    margin-bottom: 80px
+    flex-direction: column
+    margin-bottom: 30px
+    +min_sm
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      gap: 50px
+    +min_md
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      margin-bottom: 40px
+    +min_lg
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    +min_xl
+      display: flex
+      align-items: center
+      flex-direction: column
+      // justify-content: space-around
+      margin-bottom: 80px
+    +min_xxl
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 80px
+    +min_fullHd
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 80px
+    a
+      display: none
+      +min_sm
+        display: none
+      +min_md
+        display: none
+      +min_lg
+        display: block
+      +min_xl
+        display: block
+      +min_xxl
+        display: block
+      +min_fullHd
+        display: block
     h2
-      font-size: 120px
+      font-size: 30px
       font-weight: 900
-      line-height: 108px
-      text-align: left
-      max-width: 643px
+      line-height: 31.05px
+      text-align: center
+      +min_sm
+        text-align: center
+        font-size: 30px
+        line-height: 31px
+      +min_md
+        text-align: center
+        font-size: 65px
+      +min_lg
+        text-align: center
+        font-size: 80px
+      +min_xl
+        font-size: 85px
+        line-height: 
+      +min_xxl
+        font-size: 90px
+        line-height: 70px
+      +min_fullHd
+        font-size: 120px
+        font-weight: 900
+        line-height: 108px
+        text-align: left
 
   &__items-wrap
     display: flex
     align-items: center
+    flex-direction: column
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+      display: flex
+      // flex-wrap: wrap
+      flex-direction: row
+      justify-content: center
+    +min_xxl
+      display: flex
+      // flex-wrap: wrap
+    +min_fullHd
+      display: flex
+      align-items: center
+  &__img
+    width: 353px
+    height: 226px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+      width: 688px
+      height: 585px
+
+  &__pos-img
+    display: none
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+        display: block
 
   &__item
     cursor: pointer
@@ -28,9 +138,15 @@
       left: 111px
       color: #ffff
       font-size: 50px
-      font-weight: 600
+      font-weight: 700
       line-height: 55px
       text-align: left
+      +min_sm
+      +min_md
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
     a
       position: absolute
       bottom:  110px

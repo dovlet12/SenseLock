@@ -51,9 +51,10 @@ $('.js-popup').on('click', function (event) {
 });
 
 // Mobile menu toggle
-$('.js-menu').on('click',function () {
+$('.hamburger-btn').on('click', function () {
   $(this).toggleClass('is-active');
   $('.menu').toggleClass('is-opened');
+  $('body').toggleClass('overflow-hidden');
 });
 
 // Phone input mask
@@ -63,7 +64,7 @@ $('input[type="tel"]').inputmask({
 });
 
 // E-mail Ajax Send
-$('form').on('submit',function (e) {
+$('form').on('submit', function (e) {
   e.preventDefault();
 
   let form = $(this);

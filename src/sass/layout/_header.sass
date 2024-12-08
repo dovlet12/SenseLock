@@ -1,18 +1,108 @@
 .header
    background: #FBFAFA
-   &__block
+   &__adaptive-block
     display: flex
     justify-content: space-between
     align-items: center
+    background-color: black
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+      display: flex
+    +min_fullHd
+      display: none
+      // display: none
+    // height: 100px
+    button
+      background-color: #454545
+      width: 90px
+      height: 90px
+   &__adaptive-basket-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: #DA7B26
+    width: 90px
+    height: 90px
+   &__logo-adaptive-wrap
+    position: relative
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #0B0B0B
+      width: 280px
+      height: 90px
+      text-decoration: none
+      color: #fff
+      transition: all 0.4s ease
+      &:hover
+        background: #282828
+        color: #da7b26
+        &::after
+          transform: translateX(0)
+        p::after 
+          width: calc( 100% - 9px )
+    p
+      position: relative
+      font-size: 24px
+      font-weight: 600
+      line-height: 29.4px
+      letter-spacing: 0.4em
+      text-align: left
+      &::after
+        content: ''
+        position: absolute
+        width: 77px
+        right: 9px
+        height: 2px
+        background-color: #da7b26
+        bottom: -5px
+        transition: all 0.3s
+
+   &__block
+      display: none
+      +min_sm
+      +min_md
+      +min_lg
+      +min_xl
+        display: none
+      +min_xxl
+        display: none
+      +min_fullHd
+        display: flex
+        justify-content: space-between
+        align-items: center
+      
+
    &__nav
-    padding-left: 177px
-    padding-right: 178px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+      padding-left: 70px
+      padding-right: 70px
+    +min_fullHd
+      padding-left: 90px
+      padding-right: 90px
+
    &__basket-lang-wrap
      display: flex
 
    &__list
     display: flex
-    gap: 153px
+    gap: 20px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+      gap: 90px
+    +min_fullHd
+      gap: 100px
     a
       position: relative
       text-decoration: none
@@ -55,16 +145,19 @@
         color: #da7b26
         &::after
           transform: translateX(0)
-      &::after
-        content: ''
-        position: absolute
-        width: 100%
-        left: 0px
-        height: 3px
-        background-color: #da7b26
-        top: 0
-        transition: transform 0.3s ease
-        transform: translateX(calc(-100% + 30px))
+        p::after 
+          width: calc( 100% - 9px )
+
+      // &::after
+      //   content: ''
+      //   position: absolute
+      //   width: 100%
+      //   left: 0px
+      //   height: 3px
+      //   background-color: #da7b26
+      //   top: 0
+      //   transition: transform 0.3s ease
+      //   transform: translateX(calc(-100% + 30px))
 
     p
       position: relative
@@ -83,8 +176,10 @@
         background-color: #da7b26
         bottom: -5px
         transition: all 0.3s
-        ::hover
-          width: 97px
+      // &:hover
+      //   &::after
+      //     width: 97px
+
       span
         color: #da7b26
    &__lang-wrap
@@ -109,31 +204,64 @@
 
    &__basket-wrap
       position: relative
-      display: flex
-      align-items: center
-      gap: 180px
+      // display: flex
+      // align-items: center
+      // gap: 180px
       background: #DA7B26
+      // height: 166px
+      // max-width: 346px
+      // width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 69px 62px 68px 61px
+      width: 166px
       height: 166px
-      max-width: 346px
-      width: 100%
-      padding-left: 70px
-      padding-right: 70px
+      +min_sm
+      +min_md
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
+        display: flex
+        align-items: center
+        gap: 180px
+        height: 166px
+        max-width: 346px
+        width: 100%
+        padding-left: 70px
+        padding-right: 70px
+
       span
-        padding-top: 4px
-        font-family: $deff
-        font-size: 24px
-        font-weight: 00
-        line-height: 29.4px
-        text-align: left
-        color: #fff
-      &::after
-        content: ""
-        position: absolute
-        width: 125px
-        height: 3px
-        top: 50%
-        left: 120px
-        background-color: #ffff
+        display: none
+        +min_sm
+          display: none
+        +min_md
+          display: none
+        +min_lg
+          display: none
+        +min_xl
+          display: none
+        +min_xxl
+          // display: block
+        +min_fullHd
+          display: block
+          padding-top: 4px
+          font-size: 24px
+          font-weight: 600
+          line-height: 29.4px
+          text-align: left
+          color: #fff
+      &:after
+        +min_fullHd
+          display: block
+          content: ""
+          position: absolute
+          width: 125px
+          height: 3px
+          top: 50%
+          left: 120px
+          background-color: #ffff
 
 
 
