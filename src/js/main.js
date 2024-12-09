@@ -28,10 +28,6 @@ const MQ = {
 
 MQ.updateState();
 
-$(document).ready(function () {
-  //
-});
-
 $(window).on('load', function () {
   //
 });
@@ -138,3 +134,36 @@ const mfpPopup = function (popupID, source) {
     // }
   });
 };
+
+const keysWheel = new Swiper('.keys__wheel', {
+  direction: 'vertical',
+  mousewheel: true,
+  slidesPerView: 9,
+  spaceBetween: 37,
+  loop: true,
+  effect: 'coverflow',
+  centeredSlides: true,
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 18,
+    modifier: 1,
+    slideShadows: false,
+  },
+});
+
+$('.keys__subitem').on('click', function () {
+  $('.keys__subitem').removeClass('active');
+  $(this).addClass('active');
+});
+console.log(keysWheel);
+
+const dropdownKeysSublist = () => {
+  $('.keys__item-title').on('click', function () {
+    $(this).next('.keys__sublist').slideToggle();
+  });
+};
+
+$(document).ready(function () {
+  dropdownKeysSublist();
+});
