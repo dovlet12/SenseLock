@@ -2,16 +2,81 @@
   padding-top: 120px
   padding-bottom: 120px
   &__title-wrap
-    display: flex
-    justify-content: space-between
-    align-items: center
-    margin-bottom: 80px
+    +min_sm
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      gap: 50px
+    +min_md
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-content: center
+      margin-bottom: 40px
+    +min_lg
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    +min_xl
+      display: flex
+      align-items: center
+      flex-direction: column
+      margin-bottom: 80px
+    +min_xxl
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 80px
+    +min_fullHd
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      align-items: center
+      margin-bottom: 80px
+    a
+      display: none
+      +min_sm
+        display: none
+      +min_md
+        display: none
+      +min_lg
+        display: block
+      +min_xl
+        display: block
+      +min_xxl
+        display: block
+      +min_fullHd
+        display: block
     h2
       text-transform: uppercase
-      font-size: 120px
+      font-size: 30px
       font-weight: 900
-      line-height: 124.18px
-      text-align: left
+      line-height: 31px
+      text-align: center
+      margin-bottom: 20px
+      +min_sm
+        text-align: center
+        font-size: 30px
+        line-height: 31px
+      +min_md
+        text-align: center
+        font-size: 65px
+      +min_lg
+        text-align: center
+        font-size: 80px
+      +min_xl
+        font-size: 85px
+      +min_xxl
+        font-size: 90px
+        line-height: 70px
+      +min_fullHd
+        text-transform: uppercase
+        font-size: 120px
+        font-weight: 900
+        line-height: 124.18px
+        text-align: left
   &__items-wrap
     margin-bottom: 70px
     border-bottom: 1px solid #454545

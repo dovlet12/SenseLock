@@ -1,6 +1,7 @@
 .main-section
   position: relative
   padding-top: 120px
+  height: calc( 100vh - 175.4px )
   &__link
     display: flex
     justify-content: center
@@ -13,17 +14,6 @@
     text-decoration: none
     transition: all 0.5s ease
     padding: 34px 0 34px 20px
-    +min_sm
-      // isplay: flex
-      // justify-content: center
-      // align-items: center
-    +min_md
-      // display: flex
-      // justify-content: center
-      // align-items: center
-      // padding: 130px 0 130px 100px
-    +min_lg
-      // padding: 130px 0 130px 100px
     +min_xl
       padding: 130px 0 130px 100px
     +min_xxl
@@ -115,7 +105,7 @@
     display: flex
     justify-content: center
     align-items: center
-    gap: 4px
+    gap: 30px
     +min_sm
     +min_md
       display: flex
@@ -240,7 +230,7 @@
       display: block
     +min_fullHd
       display: block
-      margin-bottom: 25px
+      margin-bottom: 20px
 
   &__subtitle-wrap
     display: flex
@@ -298,6 +288,7 @@
       margin-bottom: 120px
 
   &__two-block
+    margin-bottom: 120px
     position: relative
     // height: 290px
     +min_sm

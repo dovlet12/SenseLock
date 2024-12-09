@@ -13,8 +13,7 @@
       display: flex
     +min_fullHd
       display: none
-      // display: none
-    // height: 100px
+
     button
       background-color: #454545
       width: 90px
@@ -74,10 +73,12 @@
       +min_fullHd
         display: flex
         justify-content: space-between
-        align-items: center
+        // align-items: center
       
 
    &__nav
+    display: flex
+    align-items: center
     +min_sm
     +min_md
     +min_lg
@@ -109,7 +110,7 @@
       display: inline-block
       color:  #0B0B0B
       font-size: 24px
-      font-weight: 400
+      font-weight: 600
       line-height: 29.4px
       text-align: left
       overflow: hidden
@@ -147,18 +148,6 @@
           transform: translateX(0)
         p::after 
           width: calc( 100% - 9px )
-
-      // &::after
-      //   content: ''
-      //   position: absolute
-      //   width: 100%
-      //   left: 0px
-      //   height: 3px
-      //   background-color: #da7b26
-      //   top: 0
-      //   transition: transform 0.3s ease
-      //   transform: translateX(calc(-100% + 30px))
-
     p
       position: relative
       font-family: $deff
@@ -176,19 +165,15 @@
         background-color: #da7b26
         bottom: -5px
         transition: all 0.3s
-      // &:hover
-      //   &::after
-      //     width: 97px
-
       span
         color: #da7b26
+
    &__lang-wrap
     display: flex
     justify-content: center
     flex-direction: column
     padding-right: 62px
     padding-left: 61px
-    height: 166px
     background: #454545
     transition: all 0.4s ease
     &:hover
@@ -204,19 +189,12 @@
 
    &__basket-wrap
       position: relative
-      // display: flex
-      // align-items: center
-      // gap: 180px
       background: #DA7B26
-      // height: 166px
-      // max-width: 346px
-      // width: 100%
       display: flex
       justify-content: center
-      align-items: center
       padding: 69px 62px 68px 61px
       width: 166px
-      height: 166px
+      // height: 166px
       +min_sm
       +min_md
       +min_lg
@@ -226,7 +204,7 @@
         display: flex
         align-items: center
         gap: 180px
-        height: 166px
+        // height: 166px
         max-width: 346px
         width: 100%
         padding-left: 70px

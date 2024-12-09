@@ -4,13 +4,81 @@
   &__title-wrap
     display: flex
     align-items: center
-    justify-content: space-between
-    margin-bottom: 85px
+    flex-direction: column
+    flex-direction: row
+    margin-bottom: 30px
+    +min_sm
+      display: flex
+      justify-content: center
+      flex-direction: column
+      gap: 50px
+    +min_md
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: center
+      margin-bottom: 40px
+    +min_lg
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+    +min_xl
+      display: flex
+      align-items: center
+      flex-direction: column
+      margin-bottom: 80px
+    +min_xxl
+      display: flex
+      flex-direction: column
+      align-items: center
+      margin-bottom: 80px
+    +min_fullHd
+      display: flex
+      align-items: center
+      flex-direction: row
+      justify-content: space-between
+      margin-bottom: 85px
+    a
+      display: none
+      +min_sm
+      +min_md
+      +min_lg
+        display: flex
+      +min_xl
+        display: flex
+      +min_xxl
+        display: flex
+      +min_fullHd
+        display: flex
+
     h2
-      font-size: 120px
+      text-transform: uppercase
+      font-size: 30px
       font-weight: 900
-      line-height: 124.18px
-      text-align: left
+      line-height: 31.05px
+      text-align: center
+      +min_sm
+        text-align: center
+        font-size: 30px
+        line-height: 31px
+      +min_md
+        text-align: center
+        font-size: 65px
+      +min_lg
+        text-align: center
+        font-size: 80px
+      +min_xl
+        font-size: 85px
+      +min_xxl
+        font-size: 90px
+        line-height: 70px
+      +min_fullHd
+        text-transform: uppercase
+        font-size: 120px
+        font-weight: 900
+        line-height: 124.18px
+        text-align: left
   &__items-wrap
     display: flex
     gap: 25px

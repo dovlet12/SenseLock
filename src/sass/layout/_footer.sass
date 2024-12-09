@@ -6,7 +6,7 @@
     align-items: center
     width: 100%
   &__logo-wrap
-    margin-bottom: 50px
+    position: relative
     a
       width: 346px
       display: flex
@@ -15,9 +15,14 @@
       background-color: #DA7B26
       padding: 65px 80px
       text-decoration: none
-      color: white
-      text-decoration: none
       color: #fff
+      transition: all 0.4s ease
+      &:hover
+        color: #000
+        &::after
+          transform: translateX(0)
+        p::after 
+          width: calc( 100% - 9px )
     p
       position: relative
       font-family: $deff
@@ -26,7 +31,6 @@
       line-height: 29.4px
       letter-spacing: 0.4em
       text-align: left
-      color: 
       &::after
         content: ''
         position: absolute
@@ -36,8 +40,8 @@
         background-color: black
         bottom: -5px
         transition: all 0.3s
-    span
-      color: black 
+      span
+        color: black
 
   &__col-first
     background: #0B0B0B
@@ -46,20 +50,26 @@
     max-width: 33.333%
 
   &__col-second
+    // padding: 120px
+    padding-top: 120px
     height: 766px
+    padding-left: 120px
     flex: 1 1 33.333%
     max-width: 33.333%
     background: #131313
+
   &__col-third
     background: #1C1C1C
     height: 766px
-    padding-left: 119px
-    padding-top: 100px
+    padding-left: 120px
+    padding-top: 120px
     flex: 1 1 33.333%
     max-width: 33.333%
   &__year-txt-wrap
+    padding-top: 50px
+    margin-bottom: 326px  
     p
-      padding-left: 39px
+      padding-left: 41px
       font-family: $deff
       font-size: 34px
       font-weight: 400
@@ -76,10 +86,10 @@
     font-weight: 400
     line-height: 37.4px
     text-align: left
-  &__col-second
-    padding-left: 50px
-    padding-top: 50px
-    padding-right: 254px
+  // &__col-second
+  //   padding-left: 50px
+  //   padding-top: 50px
+  //   padding-right: 254px
   &__col-second-number
     padding-bottom: 24px
     h5
@@ -137,7 +147,7 @@
       height: 1px
       top: 20px
   &__col-second-adress
-    margin-bottom: 62px
+    margin-bottom: 87px
     span
       font-family: $deff
       font-size: 28px
@@ -169,7 +179,15 @@
       line-height: 51.45px
       text-align: left
 
-      
+  &__copy-wrap
+    padding-left: 40px
+    span
+      font-size: 18px
+      font-weight: 400
+      line-height: 30.6px
+      text-align: left
+      color: #FBFAFA
+
 
 
 
