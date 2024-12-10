@@ -84,23 +84,117 @@
   &__item
     display: flex
     align-items: center
-    gap: 168px
-    margin-bottom: 60px
-    p
-      font-size: 30px
+    margin-bottom: 20px
+    +min_sm
+    +min_md
+      margin-bottom: 30px
+    +min_lg
+    +min_xl
+      margin-bottom: 40px
+    +min_xxl
+      gap: 74px
+      margin-bottom: 60px
+    +min_fullHd
+      margin-bottom: 60px
+      gap: 168px
+    h5
+      font-size: 16px
       font-weight: 400
-      line-height: 48px
+      line-height: 24px
       text-align: left
+      margin-bottom: 40px
+      display: none
+      +min_sm
+      +min_md
+      +min_lg
+      +min_xl
+      +min_xxl
+        display: block
+        font-size: 25px
+        line-height: 38.4px
+        margin-bottom: 10px
+      +min_fullHd
+        font-size: 24px
+        font-weight: 400
+        line-height: 38.4px
+        text-align: left
+        display: block
+        margin-bottom: 30px
+      span
+        color: #DA7B26
+    a
+      font-size: 16px
+      font-weight: 600
+      text-align: left
+      text-decoration: none
+      color: #0B0B0B
+      +min_sm
+        font-size: 17px
+      +min_md
+        font-size: 20px
+      +min_lg
+        font-size: 22px
+      +min_xl
+        font-size: 25px
+      +min_xxl
+        font-size: 28px
+        line-height: 24px
+      +min_fullHd
+        font-size: 24px
+        line-height: 24px
+
+    p
       color: #000
-      max-width: 1140px
-      width: 100%
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      text-align: left
+      +min_sm
+      +min_md
+        font-size: 20px
+        line-height: 24px
+      +min_lg
+        font-size: 23px
+        line-height: 30px
+      +min_xl
+        font-size: 25px
+        line-height: 38px
+      +min_xxl
+        font-size: 28px
+        line-height: 43px
+      +min_fullHd
+        font-size: 30px
+        font-weight: 400
+        line-height: 48px
+        text-align: left
+        max-width: 1140px
+        width: 100%
       span
         color: #DA7B26
     h6
-      font-size: 24px
+      font-size: 15px
       font-weight: 400
-      line-height: 38.4px
+      line-height: 23px
       text-align: left
+      +min_sm
+        font-size: 17px
+        line-height: 36px
+      +min_md
+        font-size: 20px
+        line-height: 22px
+      +min_lg
+       font-size: 22px
+       line-height: 38px
+      +min_xl
+       font-size: 25px
+      +min_xxl
+        font-size: 28px
+        line-height: 38.4px
+      +min_fullHd
+        font-size: 24px
+        font-weight: 400
+        line-height: 38.4px
+        text-align: left
       span
         color: #DA7B26
 

@@ -29,6 +29,9 @@
       color:  #DA7B26
 
   &__link-white-second
+      display: flex
+      // justify-content: center
+      align-items: center
       font-size: 20px
       font-weight: 600
       line-height: 24.5px
@@ -49,7 +52,7 @@
       +min_fullHd
         display: none
       svg
-        margin-left: 8px
+        margin-left: 10px
       &:hover
         color:  #DA7B26
 
@@ -139,50 +142,150 @@
       span
         color:   #DA7B26
   &__items-wrap
+    display: flex
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: center
+    gap: 50px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+      display: flex
+      flex-direction: column-reverse
+      align-items: center
+      justify-content: center
+      gap: 50px
+    +min_fullHd
+      display: flex
+      flex-direction: row
+      justify-content: start
+      align-items: flex-start
+      gap: 151px
+
+  &__item
+    h5
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      text-align: left
+      color: #FFFF
+      margin-bottom: 40px
+      +min_sm
+      +min_md
+      +min_lg
+        font-size: 30px
+        line-height: 51px
+      +min_xl
+      +min_xxl
+        font-size: 34px
+        line-height: 51px
+      +min_fullHd
+        font-size: 34px
+        line-height: 51px
+        text-align: left
+        max-width: 1232px
+        width: 100%
+        margin-bottom: 40px
+    p
+      font-size: 15px
+      font-weight: 400
+      line-height: 21px
+      text-align: left
+      color: #ffff
+      margin-bottom: 20px
+      +min_sm
+        font-size: 15px
+        line-height: 22px
+      +min_md
+        font-size: 16px
+        line-height: 30px
+      +min_lg
+        font-size: 22px
+        line-height: 40px
+      +min_xl
+        font-size: 23px
+        line-height: 45px
+      +min_xxl
+        font-size: 25px
+        line-height: 48px
+      +min_fullHd
+        font-size: 26px
+        line-height: 41px
+        text-align: left
+        max-width: 1232px
+        width: 100%
+        margin-bottom: 40px
+    img
+      margin-top: 43px
+      +min_sm
+      +min_md
+      +min_lg
+      +min_xl
+      +min_xxl
+        max-width: 700px
+        height: 632px
+      +min_fullHd
+        margin-top: 0
+        max-width: 750px
+        width: 100%
+        height: 682px
+        margin-left: -50px
+
+  &__svg-txt
+    display: flex
+    align-items: center
+    gap: 11px
+    margin-bottom: 10px
     +min_sm
     +min_md
     +min_lg
     +min_xl
     +min_xxl
     +min_fullHd
-      display: flex
-      gap: 151px
-  &__item
-    h5
-      color: #FFFF
-      font-size: 34px
-      font-weight: 400
-      line-height: 51px
-      text-align: left
-      max-width: 1232px
-      width: 100%
-      margin-bottom: 40px
-    p
-      font-size: 26px
-      font-weight: 400
-      line-height: 41px
-      text-align: left
-      max-width: 1232px
-      width: 100%
-      color: #FFFF
-      margin-bottom: 40px
-    img
-      max-width: 750px
-      width: 100%
-      height: 682px
-      margin-left: -50px
-
-  &__svg-txt
-    display: flex
-    align-items: center
-    gap: 21px
+      gap: 21px
+    svg
+      width: 8.53px
+      height: 8.53px
+      +min_sm
+      +min_md
+      +min_lg
+        width: 10px
+        height: 10px
+      +min_xl
+      +min_xxl
+      +min_fullHd
+        width: 16px
+        height: 16px
     h6
-      margin-top: 5px
-      font-size: 24px
+      color: #ffff
+      font-size: 14px
       font-weight: 400
-      line-height: 42px
+      line-height: 19.6px
       text-align: left
-      color: #FFFF
+      +min_sm
+        font-size: 16px
+        line-height: 22px
+      +min_md
+        font-size: 18px
+        line-height: 30px
+      +min_lg
+        font-size: 21px
+        line-height: 35px
+      +min_xl
+        font-size: 22px
+        line-height: 38px
+      +min_xxl
+        font-size: 24px
+        line-height: 42px 
+      +min_fullHd
+        margin-top: 5px
+        font-size: 24px
+        font-weight: 400
+        line-height: 42px
+        text-align: left
+        color: #FFFF
 
 
 

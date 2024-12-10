@@ -34,6 +34,7 @@ const jsLibsPaths = [
   'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js',
   'node_modules/inputmask/dist/jquery.inputmask.min.js',
   'node_modules/swiper/swiper-bundle.min.js',
+  './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
 ];
 
 // Tasks

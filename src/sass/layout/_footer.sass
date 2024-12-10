@@ -1,10 +1,206 @@
 .footer
   // margin: 0 auto
   // background-color: black
-  &__block
+  &__adaptive-block
+    background-color: #131313
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+      display: none
+
+  &__adaptive-logo-wrap
+    position: relative
+    a
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      background-color: #DA7B26
+      padding: 35px 80px
+      text-decoration: none
+      color: #fff
+      transition: all 0.4s ease
+      &:hover
+        color: #000
+        &::after
+          transform: translateX(0)
+        p::after 
+          width: calc( 100% - 9px )
+    p
+      position: relative
+      font-family: $deff
+      font-size: 24px
+      font-weight: 600
+      line-height: 29.4px
+      letter-spacing: 0.4em
+      text-align: left
+      &::after
+        content: ''
+        position: absolute
+        width: 77px
+        right: 9px
+        height: 3px
+        background-color: black
+        bottom: -5px
+        transition: all 0.3s
+      span
+        color: black
+
+  &__adaptive-col-second
     display: flex
+    justify-content: center
     align-items: center
+    flex-direction: column
+    padding-top: 30px
+
+  &__adaptive-col-second-number
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    h5
+      color: #fff
+      font-family: $deff
+      font-size: 20px
+      font-weight: 400
+      line-height: 34px
+      text-align: left
+      margin-bottom: 24px
+    p
+      font-family: $deff
+      font-size: 65px
+      font-weight: 900
+      line-height: 67.26px
+      text-align: left
+      color: #DA7B26
+      span
+        color: #fff
+
+
+  &__adaptive-col-second-number-medium
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    margin-bottom: 34px
+    h5
+      color: #fff
+      font-family: $deff
+      font-size: 20px
+      font-weight: 400
+      line-height: 34px
+      text-align: left
+    p
+      font-family: $deff
+      font-size: 50px
+      font-weight: 900
+      line-height: 67.26px
+      text-align: left
+      color: #DA7B26
+      span
+        color: #fff
+
+  &__adaptive-col-second-txt-wrap
+    position: relative
+    display: flex
+    margin-bottom: 30px
+    span
+      font-family: $deff
+      font-size: 20px
+      font-weight: 400
+      line-height: 37.4px
+      text-align: left
+      color: #fff
+      padding-left: 100px
+    &::before
+      content: ""
+      position: absolute
+      background-color: #DA7B26
+      width: 80px
+      height: 1px
+      top: 20px
+
+
+  &__adaptive-col-second-adress
+    margin-bottom: 47px
+    span
+      font-size: 28px
+      font-weight: 400
+      line-height: 30px
+      text-align: left
+      color: #fff
+
+  &__adaptive-col-second-link
+      a
+        font-size: 24px
+        font-weight: 400
+        line-height: 40.8px
+        text-align: left
+        color:  #DA7B26
+        text-decoration: none
+
+  &__adaptive-year-txt-block
+    padding-top: 23px
+    padding-bottom: 30px
+    background-color: #0B0B0B
     width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  &__adaptive-year-txt-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    p
+      padding-left: 41px
+      font-family: $deff
+      font-size: 34px
+      font-weight: 400
+      line-height: 57.8px
+      text-align: left
+      color: #fff
+      span
+        color: #DA7B26
+
+  &__adaptive-year-txt
+    // padding-left: 39px
+    color: #fff
+    font-family: $deff
+    font-size: 22px
+    font-weight: 400
+    line-height: 37.4px
+    text-align: left
+
+  &__adaptive-copy-wrap
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    span
+      font-size: 18px
+      font-weight: 400
+      line-height: 30.6px
+      text-align: left
+      color: #FBFAFA
+
+
+  &__block
+    display: none
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+      display: flex
+      align-items: center
+      width: 100%
   &__logo-wrap
     position: relative
     a
