@@ -95,12 +95,21 @@
     display: grid
     grid-template-columns: repeat(3, 1fr)
     grid-auto-rows: 585px
+    +xxl
+      grid-template-columns: repeat(2, 1fr)
+    +lg
+      grid-template-columns: repeat(1, 1fr)
+    +sm
+      grid-auto-rows: 226px
 
   &__img
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    object-fit: cover
 
   &__pos-img
     display: none
@@ -115,14 +124,13 @@
   &__item
     display: flex
     align-items: flex-end
-
     position: relative
-
     border: 1px solid #D0D0D0
     transition: all 0.5s ease
-    // padding: 0 0 55px 68px
-
     cursor: pointer
+    z-index: 1
+    +sm
+      justify-content: center
 
     &::after
       content: ''
@@ -130,9 +138,15 @@
       top: 50%
       left: 50%
       transform: translate(-50%, -50%)
-      background: url('/assets/images/top-backg.png')
+      background-image: url('/assets/images/top-backg.png')
+      background-size: cover
+      background-repeat: no-repeat
       width: 288px
       height: 381px
+      z-index: -1
+      +sm
+        width: 133px
+        height: 176px
 
     &:hover
       background-color: #DA7B26
@@ -148,14 +162,17 @@
 
 
     h5
-      // position: absolute
-      // bottom: 55px
-      // left: 73px
       font-size: 24px
       font-weight: 600
       line-height: 29.71px
       text-align: left
       margin: 0 0 55px 68px
+      +sm
+        font-size: 18px
+        line-height: 22px
+        margin: 0 0 22px 0
+        text-align: center
+
       span
         transition: all 0.5s ease
         color: #DA7B26
