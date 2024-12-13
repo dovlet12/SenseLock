@@ -172,6 +172,23 @@ const dropdownKeysSublist = () => {
   });
 };
 
+const initTextSlider = () => {
+  const textSlider = document.querySelectorAll('.text-slider');
+
+  textSlider.forEach((item, i) => {
+    new Swiper(item, {
+      direction: 'horizontal',
+      loop: true,
+      slidesPerView: 1,
+      autoHeight: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+  });
+};
+
 $(document).ready(function () {
   dropdownKeysSublist();
+  initTextSlider();
 });
