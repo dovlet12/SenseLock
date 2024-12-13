@@ -52,6 +52,12 @@
     align-items: center
     flex-direction: column
     padding-top: 30px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
 
   &__adaptive-col-second-number
     display: flex
@@ -60,19 +66,35 @@
     flex-direction: column
     h5
       color: #fff
-      font-family: $deff
-      font-size: 20px
-      font-weight: 400
-      line-height: 34px
-      text-align: left
-      margin-bottom: 24px
+      font-size: 13px
+      margin-bottom: 10px
+      +min_sm
+      +min_md
+        font-size: 20px
+        font-weight: 400
+        line-height: 34px
+        text-align: left
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
     p
-      font-family: $deff
-      font-size: 65px
+      font-size: 34px
       font-weight: 900
-      line-height: 67.26px
-      text-align: left
+      line-height: 35px
       color: #DA7B26
+      margin: 0
+      +min_sm
+      +min_md
+        font-size: 65px
+        font-weight: 900
+        line-height: 67.26px
+        text-align: left
+        color: #DA7B26
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
       span
         color: #fff
 
@@ -82,64 +104,141 @@
     justify-content: center
     align-items: center
     flex-direction: column
-    margin-bottom: 34px
+    margin-bottom: 20px
     h5
       color: #fff
-      font-family: $deff
-      font-size: 20px
       font-weight: 400
-      line-height: 34px
-      text-align: left
+      font-size: 13px
+      +min_sm
+      +min_md
+        font-size: 20px
+        line-height: 34px
+        text-align: left
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
     p
-      font-family: $deff
-      font-size: 50px
+      margin: 0
+      font-size: 28px
       font-weight: 900
-      line-height: 67.26px
-      text-align: left
       color: #DA7B26
+      +min_sm
+      +min_md
+        font-size: 50px
+        line-height: 67.26px
+        text-align: left
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
       span
         color: #fff
 
   &__adaptive-col-second-txt-wrap
     position: relative
     display: flex
-    margin-bottom: 30px
+    margin-bottom: 18px
+    +min_sm
+    +min_md
+      margin-bottom: 30px
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
     span
-      font-family: $deff
-      font-size: 20px
-      font-weight: 400
-      line-height: 37.4px
-      text-align: left
       color: #fff
-      padding-left: 100px
+      font-weight: 400
+      font-size: 13px
+      font-weight: 400
+      line-height: 22.1px
+      padding-left: 60px
+      +min_sm
+      +min_md
+        font-size: 20px
+        line-height: 37.4px
+        text-align: left
+        padding-left: 100px
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
     &::before
       content: ""
       position: absolute
       background-color: #DA7B26
-      width: 80px
+      width: 42.67px
       height: 1px
-      top: 20px
+      bottom: 9px
+      +min_sm
+      +min_md
+        width: 80px
+        height: 1px
+        top: 20px
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
 
 
   &__adaptive-col-second-adress
-    margin-bottom: 47px
+    margin-bottom: 26px
+    +min_sm
+    +min_md
+      margin-bottom: 47px
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+    // br
+    //   display: none
+    // +min_sm
+    // +min_md
+    //   display: block
+    // +min_lg
+    // +min_xl
+    // +min_xxl
+    // +min_fullHd
     span
-      font-size: 28px
+      width: 317px
+      align-items: center
+      font-size: 16px
       font-weight: 400
-      line-height: 30px
-      text-align: left
+      line-height: 24px
       color: #fff
+      text-align: center
+      +min_sm
+      +min_md
+        font-size: 28px
+        font-weight: 400
+        line-height: 30px
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
 
   &__adaptive-col-second-link
     margin-bottom: 25px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
     a
-      font-size: 24px
+      font-size: 15px
       font-weight: 400
-      line-height: 40.8px
-      text-align: left
+      line-height: 25.5px
+      text-align: center
       color:  #DA7B26
-      text-decoration: none
-      margin-bottom: 25px
+      +min_sm
+      +min_md
+        font-size: 24px
+        line-height: 40.8px
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
 
   &__adaptive-year-txt-block
     padding-top: 23px
@@ -156,25 +255,49 @@
     justify-content: center
     align-items: center
     flex-direction: column
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
     p
-      padding-left: 41px
-      font-family: $deff
-      font-size: 34px
+      margin: 0
+      font-size: 18px
       font-weight: 400
-      line-height: 57.8px
-      text-align: left
+      line-height: 30.6px
+      text-align: center
       color: #fff
+      padding: 0  
+      +min_sm
+      +min_md
+        // padding-left: 41px
+        font-size: 34px
+        line-height: 57.8px
+        text-align: left
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
       span
         color: #DA7B26
 
   &__adaptive-year-txt
-    // padding-left: 39px
+    margin-bottom: 11px
     color: #fff
-    font-family: $deff
-    font-size: 22px
+    font-size: 14px
     font-weight: 400
-    line-height: 37.4px
-    text-align: left
+    line-height: 23.8px
+    text-align: center
+    +min_sm
+    +min_md
+      font-size: 22px
+      line-height: 37.4px
+      text-align: left
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
 
   &__adaptive-copy-wrap
     display: flex
@@ -182,17 +305,34 @@
     align-items: center
     flex-direction: column
     span
-      font-size: 18px
+      font-size: 13px
       font-weight: 400
-      line-height: 30.6px
-      text-align: left
+      line-height: 22.1px
       color: #FBFAFA
-      a
+      +min_sm
+      +min_md
         font-size: 18px
-        font-weight: 400
         line-height: 30.6px
         text-align: left
+      +min_lg
+      +min_xl
+      +min_xxl
+      +min_fullHd
+      a
+        font-size: 13px
+        font-weight: 400
+        line-height: 22.1px
         color: #DA7B26
+        +min_sm
+        +min_md
+          font-size: 18px
+          font-weight: 400
+          line-height: 30.6px
+          text-align: left
+        +min_lg
+        +min_xl
+        +min_xxl
+        +min_fullHd
 
   &__block
     display: none
@@ -286,22 +426,17 @@
     font-weight: 400
     line-height: 37.4px
     text-align: left
-  // &__col-second
-  //   padding-left: 50px
-  //   padding-top: 50px
-  //   padding-right: 254px
   &__col-second-number
     padding-bottom: 24px
     h5
       color: #fff
-      font-family: $deff
       font-size: 20px
       font-weight: 400
       line-height: 34px
       text-align: left
       margin-bottom: 24px
     p
-      font-family: $deff
+      margin: 0
       font-size: 65px
       font-weight: 900
       line-height: 67.26px
@@ -313,13 +448,12 @@
     margin-bottom: 34px
     h5
       color: #fff
-      font-family: $deff
       font-size: 20px
       font-weight: 400
       line-height: 34px
       text-align: left
     p
-      font-family: $deff
+      margin: 0
       font-size: 50px
       font-weight: 900
       line-height: 67.26px
