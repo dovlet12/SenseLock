@@ -1,7 +1,11 @@
 .main-section
   position: relative
-  padding-top: 120px
-  // height: calc( 100vh - 175.4px )
+  padding-top: 70px
+  // height: calc( 100vh - 175px )
+  // overflow: hidden
+  height: calc( 100vh - 175px )
+  width: 100%
+
   &__link
     display: flex
     justify-content: center
@@ -302,8 +306,8 @@
     +min_fullHd
       display: flex
     span
-      font-size: 30px
-      line-height: 58px
+      font-size: 34px
+      line-height: 58px 
       position: absolute
       top: 50%
       left: 50%
@@ -313,7 +317,6 @@
       color: transparent
       -webkit-text-stroke: 1px #BCB6B6E5
       transform: translate(-50%,-50%)
-
       +min_sm
       +min_md
         font-size: 70px
