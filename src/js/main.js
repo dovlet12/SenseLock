@@ -154,7 +154,8 @@ const sliderSettings = {
 
 const keysWheel = new Swiper('.keys__wheel', sliderSettings);
 
-$('.keys__subitem').on('click', function () {
+$('.keys__subitem').on('click', function (e) {
+  e.preventDefault();
   $('.keys__subitem').removeClass('active');
   $(this).addClass('active');
 });
