@@ -6,15 +6,18 @@
     grid-template-rows: 1136px
 
   &__col
+    position: relative
     display: grid
     grid-template-rows: 1136px
     height: 1136px
     &:nth-child(1)
       background: #0B0B0B
+
     &:nth-child(2)
       background: #DA7B26
 
   &__wheel
+    transition: all 0.3s ease
     width: 100%
     // height: 1136px
 
@@ -22,17 +25,16 @@
     //   content: ''
     //   // background: 
 
-
   &__btn
     color: transparent
     -webkit-text-stroke: 1.5px #fff
-  
-  &__collapse-btn
+
+  &__dropdown-btn
     color: #fff
-    display: none
+    // display: none
 
   &__btn,
-  &__collapse-btn
+  &__dropdown-btn
     font-weight: 800
     font-size: 120px
     line-height: 87px
@@ -44,11 +46,48 @@
     .keys__btn
       color: #fff
 
-  &__collapse
-    display: flex
-    flex-direction: column
+  &__dropdown
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    height: 100%
     padding-top: 165px
+    background: inherit
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    transform: translateY(-50%)
+    z-index: 1
+    transition: all 0.3s ease
+    overflow: hidden
 
+    &--active
+      opacity: 1
+      visibility: visible
+      pointer-events: initial
+      &::after
+      .keys__dropdown-inner
+        transform: translateY(0)
+        // &::after
+        //   transform: translateY(calc( 100% + 165px ))
+    &-inner
+      display: flex
+      flex-direction: column
+      row-gap: 120px
+      transform: translateY(50%)
+      transition: all 0.3s ease-in-out 0.3s
+      // &::after
+      //   content: ''
+      //   background: #0B0B0B
+      //   width: 100%
+      //   height: 100%
+      //   position: absolute
+      //   top: 0
+      //   left: 0
+      //   transform: translateY(50%)
+      //   z-index: 2
+      //   transition: all 0.3s ease-in-out 0.3s
 
   &__list
     display: flex
@@ -56,8 +95,7 @@
     align-items: center
 
   &__sublist
-    // display: none
-    padding-top: 76px
+    // padding-top: 76px
 
   &__subitem
     position: relative
@@ -67,7 +105,7 @@
         display: block
       a
         color: #DA7B26
-    img 
+    img
       width: 237px
       height: 237px
       position: absolute

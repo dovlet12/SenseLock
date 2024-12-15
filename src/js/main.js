@@ -160,15 +160,20 @@ $('.keys__subitem').on('click', function () {
 });
 
 const dropdownKeysSublist = () => {
-  $('.keys__btn').on('click', function () {
+  const btn = $('.keys__btn');
+  btn.on('click', function (e) {
+    e.preventDefault();
+    const currentElement = $(e.currentTarget);
+    const id = currentElement.attr('data-target').replace('#', '');
     const parent = $(this).closest('.keys__wheel');
-    parent.slideUp('fast');
-    $('.keys__collapse-btn').slideDown('fast');
+    const currentDropdown = $(`.keys__dropdown[data-id="${id}"]`);
+    parent.addClass('hide');
+    currentDropdown.addClass('keys__dropdown--active');
   });
 
-  $('.keys__collapse-btn').on('click', function () {
-    $(this).closest('.keys__col').find('.keys__wheel').slideDown('fast');
-    $(this).slideUp('fast');
+  $('.keys__dropdown-btn').on('click', function () {
+    $(this).closest('.keys__col').find('.keys__wheel').removeClass('hide');
+    $(this).closest('.keys__col').find('.keys__dropdown').removeClass('keys__dropdown--active');
   });
 };
 
