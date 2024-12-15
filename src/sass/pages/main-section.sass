@@ -1,7 +1,15 @@
 .main-section
   position: relative
-  padding-top: 120px
-  // height: calc( 100vh - 175.4px )
+  padding-top: 220px
+  +min_sm
+  +min_md
+  +min_lg
+  +min_xl
+  +min_xxl
+  +min_fullHd
+    padding-top: 370px
+  // height: 100vh
+  // height: calc( 100vh - 375px )
   &__link
     display: flex
     justify-content: center
@@ -64,11 +72,10 @@
     justify-content: center
     svg
       position: absolute
-      top: -210px
-      transform: translate(-50% -50%)
+      top: 50px
       z-index: -999 
-      width: 997px
-      height: 1170px
+      height: 1367px
+      width: 1050
 
   &__title-wrap
     text-align: center
@@ -81,7 +88,7 @@
     +min_fullHd
 
   &__title-line
-    margin-bottom: 20px
+    margin: 0
     +min_sm
     +min_md 
       display: flex
@@ -92,6 +99,7 @@
       display: flex
     +min_xl
       display: flex
+      margin-bottom: 20px
     +min_xxl
       display: flex
       justify-content: center
@@ -101,6 +109,7 @@
       justify-content: center
       align-items: center
       gap: 8px
+      margin: 0
 
   &__title-line-second
     display: flex
@@ -121,7 +130,7 @@
       display: flex
       justify-content: center
       align-items: center
-      gap: 30px
+      gap: 19px
     
   &__title-bold
     color: #000
@@ -170,7 +179,7 @@
 
   &__title-outlined
     color: #fff
-    -webkit-text-stroke: 1px #000
+    -webkit-text-stroke: 2px #000
     font-size: 78.39px
     line-height: 81.13px
     text-align: left
@@ -288,10 +297,10 @@
       display: flex
       justify-content: center
       align-items: center
-      margin-bottom: 120px
+      margin-bottom:  9.885vh
 
   &__two-block
-    margin-bottom: 120px
+    margin-bottom: 9.885vh
     position: relative
     // height: 290px
     +min_sm
@@ -302,8 +311,8 @@
     +min_fullHd
       display: flex
     span
-      font-size: 30px
-      line-height: 58px
+      font-size: 34px
+      line-height: 58px 
       position: absolute
       top: 50%
       left: 50%
@@ -313,7 +322,6 @@
       color: transparent
       -webkit-text-stroke: 1px #BCB6B6E5
       transform: translate(-50%,-50%)
-
       +min_sm
       +min_md
         font-size: 70px

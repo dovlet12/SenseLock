@@ -1,4 +1,7 @@
 .header
+   position: fixed
+   width: 100%
+   z-index: 999
    background: #FBFAFA
    &__adaptive-block
     display: flex
@@ -32,7 +35,7 @@
       justify-content: center
       align-items: center
       background-color: #0B0B0B
-      width: 280px
+      width: 200px
       height: 90px
       text-decoration: none
       color: #fff
@@ -46,9 +49,9 @@
           width: calc( 100% - 9px )
     p
       position: relative
-      font-size: 24px
+      font-size: 16px
       font-weight: 600
-      line-height: 29.4px
+      line-height: 20.4px
       letter-spacing: 0.4em
       text-align: left
       &::after
@@ -115,7 +118,9 @@
       text-align: left
       overflow: hidden
       padding-bottom: 10px
+      transition: all 0.5s ease
       &:hover
+        color: #da7b26
         &::after
           transform: translateX(0)
       &::after
@@ -194,6 +199,7 @@
       justify-content: center
       padding: 69px 62px 68px 61px
       width: 166px
+      text-decoration: none
       // height: 166px
       +min_sm
       +min_md

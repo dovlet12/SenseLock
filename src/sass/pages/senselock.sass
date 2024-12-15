@@ -1,6 +1,68 @@
 .senselock
   padding-top: 120px
   padding-bottom: 120px
+
+  &__adaptive-second-block-item
+    // margin-top: 150px
+    max-width: 354px
+    width: 100%
+    height: 328px
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+      display: none
+
+  &__adaptive-second-block-number
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+    h3
+      display: flex
+      align-items: flex-start
+      justify-content: start
+      gap: 11px
+      font-size: 42px
+      font-weight: 900
+      line-height: 43px
+      text-align: left
+      color: #000
+      span
+        font-size: 22px
+        font-weight: 900
+        line-height: 22px
+        text-align: left
+        margin-bottom: 38px
+        -webkit-text-stroke: 1px #000
+        color: #fff
+    h6
+      font-size: 14px
+      font-weight: 400
+      line-height: 23px
+      text-align: left
+      svg
+        margin-right: 5px
+
+  &__adaptive-second-block-txt
+    a
+      font-size: 16px
+      font-weight: 600
+      line-height: 27px
+      text-align: left
+      color: #000
+      transition:  all 0.4s ease
+      text-decoration: none
+      &:hover
+        color: #DA7B26
+    p
+      margin-top: 15px
+      font-size: 12px
+      font-weight: 400
+      line-height: 21px
+      text-align: left
+
   &__title-wrap
     +min_sm
       display: flex
@@ -199,9 +261,16 @@
         color: #DA7B26
 
   &__items-second-block
-    display: flex
-    align-items: center
-    gap: 100px
+    display: none
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+    +min_xxl
+    +min_fullHd
+      display: flex
+      align-items: center
+      gap: 100px
 
   &__second-block-item
     max-width: 650px
