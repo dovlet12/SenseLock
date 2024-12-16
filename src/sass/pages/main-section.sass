@@ -1,15 +1,8 @@
 .main-section
   position: relative
   padding-top: 220px
-  +min_sm
-  +min_md
-  +min_lg
-  +min_xl
-  +min_xxl
   +min_fullHd
     padding-top: 370px
-  // height: 100vh
-  // height: calc( 100vh - 375px )
   &__link
     display: flex
     justify-content: center
@@ -31,12 +24,6 @@
       display: none
     &:hover
       color: #fff
-    +min_sm
-    +min_md
-    +min_lg
-    +min_xl
-    +min_xxl
-    +min_fullHd
     svg
       margin-left: 5px
 
@@ -104,6 +91,7 @@
       display: flex
       justify-content: center
       align-items: center
+      margin: 0
     +min_fullHd
       display: flex
       justify-content: center
@@ -378,16 +366,12 @@
     max-width: 100%
     background:  #DA7B26
     height: 88px
-    +min_sm
-      background:  #DA7B26
-    +min_md
-      background:  #DA7B26
     +min_lg
     +min_xl
       height: 290px
     +min_xxl
     +min_fullHd
-      height: 290px
+      height: 23.9vh
       max-width: 50%
       background:  #FBFAFA
 
@@ -408,11 +392,6 @@
     +min_xxl
       // display: none
     +min_fullHd
-      flex: 1 1 50%
-      max-width: 50%
-      background-image: url("../assets/images/background.png")
-      background-repeat: no-repeat
-      background-size: cover
       width: 100%
 
 

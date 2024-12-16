@@ -53,6 +53,11 @@ $('.hamburger-btn').on('click', function () {
   $('body').toggleClass('overflow-hidden');
 });
 
+$('.menu__close-btn-wrap').on('click', function () {
+  $('.menu').removeClass('is-opened');
+  $('.hamburger-btn').removeClass('is-active');
+});
+
 // Phone input mask
 $('input[type="tel"]').inputmask({
   mask: '+7 (999) 999-99-99',

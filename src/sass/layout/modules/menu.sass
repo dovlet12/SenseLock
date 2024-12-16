@@ -1,5 +1,5 @@
 .menu
-  min-width: 400px
+  min-width: 358px
   background: #0B0B0B
   transform: translateX(100%)
   position: absolute
@@ -8,8 +8,8 @@
   color: #fff
   height: 100vh
   transition: all 0.3s ease
-  z-index: 9999
-  padding: 10px 
+  z-index: 999
+  // padding: 10px 
   &.is-opened
     transform: translateX(0)
   &__top-block
@@ -18,8 +18,12 @@
     justify-content: space-between
     align-items: center
   &__lang
-    padding: 36px 31px 34px 30px
+    display: flex
+    justify-content: center
+    align-items: center
     background-color: #454545
+    width: 90px
+    height: 90px
     a
       font-size: 16px
       font-weight: 400
@@ -31,6 +35,7 @@
     border-bottom: 1px solid #2F2F2F
     display: flex
     gap: 12px
+    padding-left: 20px
     a
       padding-bottom: 15px
       padding-top: 15px
@@ -54,6 +59,7 @@
     // border-bottom: 1px solid gray
     display: flex
     gap: 12px
+    padding-left: 20px
     a
       padding-bottom: 15px
       padding-top: 15px
@@ -77,6 +83,7 @@
     border-bottom: 1px solid #2F2F2F
     display: flex
     gap: 12px
+    padding-left: 20px
     margin-bottom: 151px
     a
       padding-bottom: 15px
@@ -100,6 +107,7 @@
     display: flex
     justify-content: center
     align-items: center
+    margin-bottom: 30px 
     a
       color: #DA7B26
       font-size: 15px
@@ -107,4 +115,41 @@
       line-height: 25.5px
       text-align: center
       text-decoration: none
-
+  &__close-btn-wrap
+      display: flex
+      justify-content: center
+      align-items: center
+  &__box
+      position: relative
+      background-color: #D97727
+      width: 90px
+      height: 90px
+  &__cross  
+      position: absolute
+      top: 50%
+      left: 50%
+      height: 2px
+      // background-color: white
+      transform: translate(-50% -50%)
+      &::before 
+        content: ''
+        position: absolute
+        width: 2px
+        height: 22px
+        background-color: white
+        left: 50%
+        top: -10px
+        transform: rotate(45deg)
+      &::after 
+        content: ''
+        position: absolute
+        width: 22px
+        height: 2px
+        background-color: black
+        top: 0px
+        left: -10px
+        transform: rotate(45deg)
+  
+.hamburger-inner
+  &::before
+    background-color: #DA7B26
