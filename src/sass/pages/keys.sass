@@ -1,10 +1,25 @@
 .keys
   padding: 120px 0
   &__content
-    display: grid
-    grid-template-columns: repeat(2,1fr)
-    grid-template-rows: 1136px
-
+    // display: grid
+    // grid-template-columns: repeat(2,1fr)
+    // grid-template-rows: 1136px
+    display: flex
+    flex-direction: column
+    +min_sm
+    +min_md
+    +min_lg
+    +min_xl
+      display: flex
+      flex-direction: column
+    +min_xxl
+      display: flex
+      flex-direction: column
+    +min_fullHd
+      display: grid
+      grid-template-columns: repeat(2,1fr)
+      grid-template-rows: 1136px
+      
   &__col
     position: relative
     display: grid
@@ -19,11 +34,7 @@
   &__wheel
     transition: all 0.3s ease
     width: 100%
-    // height: 1136px
 
-    // &:::before
-    //   content: ''
-    //   // background: 
 
   &__btn
     color: transparent
