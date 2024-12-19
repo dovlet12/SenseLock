@@ -2,7 +2,9 @@
 
 // Breakpoints
 const breakpoints = {
-  xl: 1200,
+  fullHd: 1920,
+  xxl: 1600,
+  xl: 1366,
   lg: 992,
   md: 768,
   sm: 576,
@@ -199,7 +201,42 @@ const initTextSlider = () => {
   });
 };
 
+const calcRem = () => {
+  if ($(window).outerWidth() <= breakpoints.fullHd) {
+    $('html').removeAttr('style');
+    return;
+  }
+
+  let _deltaX = 0;
+  let _deltaY = 0;
+
+  if (window.innerHeight < window.innerWidth) {
+    _deltaX = (window.innerWidth / 1920) * 100;
+    _deltaY = (window.innerHeight / 980) * 100;
+  } else {
+    _deltaX = (window.innerWidth / 1920) * 100;
+    _deltaY = (window.innerHeight / 980) * 100;
+  }
+
+  if (_deltaX <= _deltaY) {
+    $('html').css('font-size', _deltaX + '%');
+  } else {
+    $('html').css('font-size', _deltaY + '%');
+  }
+};
+
+const initRems = () => {
+  if ($(window).outerWidth() > breakpoints.fullHd) {
+    calcRem();
+  }
+
+  $(window).on('load resize', function () {
+    calcRem();
+  });
+};
+
 $(document).ready(function () {
   dropdownKeysSublist();
   initTextSlider();
+  initRems();
 });

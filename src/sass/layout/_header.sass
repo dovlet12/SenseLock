@@ -1,43 +1,39 @@
 .header
-   position: fixed
-   width: 100%
-   z-index: 999
-   background: #FBFAFA
-   
-   &__adaptive-block
+  position: fixed
+  width: 100%
+  z-index: 999
+  background: #FBFAFA
+
+  &__adaptive-block
     display: flex
     justify-content: space-between
     align-items: center
     background-color: black
-    +min_sm
-    +min_md
-    +min_lg
     +min_xl
-    +min_xxl
-      display: flex
-    +min_fullHd
       display: none
 
-    button
-      background-color: #454545
-      width: 90px
-      height: 90px
-   &__adaptive-basket-wrap
+  button
+    background-color: #454545
+    width: 5.625rem
+    height: 5.625rem
+
+  &__adaptive-basket-wrap
     display: flex
     justify-content: center
     align-items: center
     background-color: #DA7B26
-    width: 90px
-    height: 90px
-   &__logo-adaptive-wrap
+    width: 5.625rem
+    height: 5.625rem
+
+  &__logo-adaptive-wrap
     position: relative
     a
       display: flex
       justify-content: center
       align-items: center
       background-color: #0B0B0B
-      width: 200px
-      height: 90px
+      width: 12.5rem
+      height: 5.625rem
       text-decoration: none
       color: #fff
       transition: all 0.4s ease
@@ -47,59 +43,71 @@
         &::after
           transform: translateX(0)
         p::after 
-          width: calc( 100% - 9px )
+          width: calc( 100% - .5625rem )
     p
       position: relative
-      font-size: 16px
+      font-size: 1rem
       font-weight: 600
-      line-height: 20.4px
+      line-height: 1.275rem
       letter-spacing: 0.4em
       text-align: left
       &::after
         content: ''
         position: absolute
-        width: 77px
-        right: 9px
-        height: 2px
+        width: 4.8125rem
+        right: .5625rem
+        height: .125rem
         background-color: #da7b26
-        bottom: -5px
+        bottom: -0.3125rem
         transition: all 0.3s
 
-   &__block
-      display: none
-      +min_sm
-      +min_md
-      +min_lg
-      +min_xl
-        display: none
-      +min_xxl
-        display: none
-      +min_fullHd
-        display: flex
-        justify-content: space-between
+  &__block
+    display: none
+    +min_xl
+      display: flex
+      justify-content: space-between
 
-   &__nav
+  &__nav
     display: flex
     align-items: center
 
-   &__basket-lang-wrap
-     display: flex
-
-   &__list
+  &__basket-lang-wrap
     display: flex
-    gap: 80px
+
+  &__basket-svg-wrap
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 1.5rem
+    height: 1.5rem
+    svg
+      width: 100%
+      height: 100%
+  &__list
+    display: flex
+    // gap: 5rem
+    +min_xl
+      gap: 4rem
+    +min_xxl
+      gap: 5.3125rem
     a
       position: relative
       text-decoration: none
       display: inline-block
       color:  #0B0B0B
-      font-size: 24px
+      // font-size: 1.5rem
       font-weight: 600
-      line-height: 29.4px
+      // line-height: 1.8375rem
       text-align: left
       overflow: hidden
-      padding-bottom: 10px
+      padding-bottom: .625rem
       transition: all 0.5s ease
+      +min_xl
+        font-size: 1rem
+        line-height: 1.225rem
+      +min_xxl
+        font-size: 1.25rem
+        line-height: 1.5313rem
       &:hover
         color: #da7b26
         &::after
@@ -108,127 +116,153 @@
         content: ''
         position: absolute
         width: 100%
-        left: 0px
-        height: 3px
+        left: 0rem
+        height: .1875rem
         background-color: #da7b26
         bottom: 0
         transition: transform 0.3s ease
-        transform: translateX(calc(-100% + 30px))
+        transform: translateX(calc(-100% + 1.875rem))
 
 
-   &__logo-wrap
+  &__logo-wrap
     position: relative
     a
       display: flex
       justify-content: center
       align-items: center
       background-color: #0B0B0B
-      padding: 65px 80px
       text-decoration: none
       color: #fff
       transition: all 0.4s ease
+      +min_xl
+        padding: 2.25rem 2.625rem
+      +min_xxl
+        padding: 3.125rem 3.75rem
+
       &:hover
         background: #282828
         color: #da7b26
-        &::after
-          transform: translateX(0)
+        // &::after
+        //   transform: translateX(0)
         p::after 
-          width: calc( 100% - 9px )
+          width: calc( 100% - .25rem )
     p
       position: relative
       font-family: $deff
-      font-size: 24px
-      font-weight: 600
-      line-height: 29.4px
-      letter-spacing: 0.4em
       text-align: left
+      margin-bottom: 0
+      +min_xl
+        font-size: .8rem
+        font-weight: 600
+        line-height: .98rem
+        letter-spacing: 0.4em
+      +min_xxl
+        font-size: 1.125rem
+        line-height: 1.375rem
+      +min_fullHd
+        font-size: 1.5rem
+        line-height: 1.8375rem
+
       &::after
         content: ''
         position: absolute
-        width: 77px
-        right: 9px
-        height: 2px
+        right: .25rem
+        height: .125rem
         background-color: #da7b26
-        bottom: -5px
+        bottom: -0.3125rem
         transition: all 0.3s
+        +min_xl
+          width: 2.5625rem
+        +min_xxl
+          width: 3.75rem
+        +min_fullHd
+          width: 4.8125rem
       span
         color: #da7b26
 
-   &__lang-wrap
+  &__lang-wrap
     display: flex
     justify-content: center
     flex-direction: column
-    padding-right: 62px
-    padding-left: 61px
+    // padding-right: 3.875rem
+    // padding-left: 3.8125rem
     background: #454545
     transition: all 0.4s ease
+    +min_xl
+      padding: 2.125rem 1.875rem
+    +min_xxl
+      padding: 3.1875rem 2.6875rem
+
     &:hover
       background: #555454
     a
       font-family: $deff
-      font-size: 20px
       font-weight: 400
-      line-height: 29.4px
       text-align: left
       text-decoration: none
       color: #FFFFFF
+      +min_xl
+        font-size: 1rem
+        line-height: 1.1875rem
+      +min_xxl
+        font-size: 1.25rem
+        line-height: 1.8375rem
 
-   &__basket-wrap
+  &__basket-wrap
       position: relative
       background: #DA7B26
       display: flex
       justify-content: center
-      // padding: 69px 62px 68px 61px
-      // width: 166px
+      align-items: center
       text-decoration: none
-      // height: 166px
-      +min_sm
-      +min_md
-      +min_lg
       +min_xl
-      +min_xxl
-      +min_fullHd
-        display: flex
         align-items: center
-        gap: 180px
-        // height: 166px
-        // max-width: 346px
-        // width: 100%
-        padding-left: 70px
-        padding-right: 70px
+        padding-left: 1.5625rem
+        padding-right: 1.375rem
+        gap: 6.4375rem
+      +min_xxl
+        align-items: center
+        gap: 6.6875rem
+        padding-left: 2.9375rem
+        padding-right: 2.9375rem
       &:hover
         background-color: #F2913A
 
       span
-        display: none
-        +min_sm
-          display: none
-        +min_md
-          display: none
-        +min_lg
-          display: none
+        // padding-top: .3125rem
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
         +min_xl
-          display: none
         +min_xxl
-          // display: block
-        +min_fullHd
-          display: block
-          padding-top: 4px
-          font-size: 24px
+          font-size: 1.25rem
           font-weight: 600
-          line-height: 29.4px
+          line-height: 1.5313rem
           text-align: left
-          color: #fff
+        // +min_fullHd
+        //   display: block
+        //   padding-top: .25rem
+        //   font-size: 1.5rem
+        //   font-weight: 600
+        //   line-height: 1.8375rem
+        //   text-align: left
       &:after
-        +min_fullHd
-          display: block
-          content: ""
-          position: absolute
-          width: 125px
-          height: 3px
-          top: 50%
-          left: 120px
-          background-color: #ffff
+        // +min_fullHd
+        display: block
+        content: ""
+        position: absolute
+        // width: 7.8125rem
+        height: .0625rem
+        top: 50%
+        // left: 7.5rem
+        background-color: #ffff
+        +min_xl
+          width: 4.125rem
+          left: 4.375rem
+        +min_xxl
+          width: 4.5625rem
+          left: 5.25rem
 
 
 
